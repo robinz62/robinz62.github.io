@@ -2,24 +2,36 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="css/robin.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
     <title>Robin</title>
   </head>
   <body>
-    <div class="jumbotron">
-      <div class="container">
-        <h1 class="display-3">Robin Zhang</h1>
-        <p>
-          Hullo. I'm a junior pursuing a BS and MS in Computer Science at the University of
-          Pennsylvania, graduating in May 2019. I like teaching, solving problems, and working
-          on various projects.
-        </p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
-      </div>
-    </div>
     <div class="container">
-      Something?
+      <div class="nav">
+        <ul>
+          <li id="li1"><a href="#">home</a></li>
+          <li id="li2"><a href="#">projects</a></li>
+          <li id="li3"><a href="#">other</a></li>
+        </ul>
+      </div>
+      <div class="header">
+        <p class="name">ROBIN ZHANG</p>
+        <p class="headline">Computer Science · University of Pennsylvania '19</p>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/robinzhang97" target="_blank"><img src="img/linkedin.svg" alt="linkedin link" class="img-link"></a>
+          <a href="https://github.com/robinz62" target="_blank"><img src="img/github.svg" alt="github link" class="img-link"></a>
+          <a href="mailto:rzha@seas.upenn.edu" target="_blank"><img src="img/gmail.svg" alt="email link" class="img-link"></a>
+        </div>
+      </div>
+      <!-- a hack to center the header properly; just mirror the left nav bar -->
+      <div class="nav" id="invis">
+        <ul>
+          <li>home</li>
+          <li>projects</li>
+          <li>other</li>
+        </ul>
+      </div>
     </div>
   </body>
 </html>
