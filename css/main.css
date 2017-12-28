@@ -1,3 +1,7 @@
+html {
+  overflow-y: scroll;
+}
+
 body {
   text-align: center;
 }
@@ -21,6 +25,7 @@ a:link, a:visited {
 .container {
   display: inline-block;
   margin-top: 24vmin;
+  margin-bottom: 24vmin;
 }
 
 .content {
@@ -78,7 +83,7 @@ a:link, a:visited {
 }
 
 #li1, #li2, #li3, #li4 {
-  animation: fade-in 0.6s ease-in 0s 1 normal;
+  animation: fade-in 0.4s ease-in 0s 1 normal;
   animation-fill-mode: backwards;
 }
 
@@ -107,11 +112,42 @@ a:link, a:visited {
 
 /* page-specific */
 
-#about-text {
+#about-container {
   font-size: 2vmin;
   margin-top: 2vmin;
   margin-left: 1vmin;
   text-align: left;
+}
+
+#projects-container {
+  font-size: 2vmin;
+  margin-top: 2vmin;
+  margin-left: 1vmin;
+  text-align: left;
+}
+
+.project {
+  margin-bottom: 4vmin;
+}
+
+#other-container {
+  font-size: 2vmin;
+  margin-top: 2vmin;
+  margin-left: 1vmin;
+  text-align: left;
+}
+
+.other {
+  margin-bottom: 3vmin;
+  margin-top: 3vmin;
+}
+
+#first-other {
+  margin-top: 2vmin;
+}
+
+#steam-link {
+  color: black;
 }
 
 /* animations */
