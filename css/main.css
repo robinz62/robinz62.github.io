@@ -82,13 +82,19 @@ a:link, a:visited {
   opacity: 0.25;
 }
 
-#li1, #li2, #li3, #li4 {
+.nav-active {
+  opacity: 0.25;
+}
+
+#li2, #li3, #li4 {
   animation: fade-in 0.4s ease-in 0s 1 normal;
   animation-fill-mode: backwards;
 }
 
 #li1 {
+  animation: fade-in-partial 0.4s ease-in 0s 1 normal;
   animation-delay: 0.4s;
+  animation-fill-mode: backwards;
 }
 
 #li2 {
@@ -157,7 +163,7 @@ a:link, a:visited {
   to   { opacity: 1; }
 }
 
-@keyframes fade-out {
-  from { opacity: 1; }
-  to   { opactiy: 0; }
+@keyframes fade-in-partial {
+  from { opacity: 0; }
+  to   { opacity: 0.25; }
 }
