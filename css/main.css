@@ -15,7 +15,7 @@ a {
   line-height: 0;
 }
 
-a:link, a:visited {
+.nav a:link, .nav a:visited {
   color: #404040;
   text-decoration: none;
 }
@@ -152,8 +152,16 @@ a:link, a:visited {
   margin-top: 2vmin;
 }
 
-#steam-link {
+.black-link {
   color: black;
+  font-weight: 600;
+  text-decoration: none;
+  
+  transition: opacity 0.25s ease;
+}
+
+.black-link:hover {
+  opacity: 0.5;
 }
 
 /* animations */
