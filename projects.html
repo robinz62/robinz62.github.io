@@ -14,19 +14,67 @@
           <li><a href="index.html">home</a></li>
           <li><a href="about.html">about</a></li>
           <li class="nav-active"><a href="projects.html">projects</a></li>
-          <li><a href="other.html">other</a></li>
+          <li><a href="random.html">random</a></li>
         </ul>
       </div>
       <div class="content">
         <div id="projects-container">
           <div class="project">
-            nothing to see here
+            <b>Electronic Health Record System for Heart for Africa</b>
+            <br>
+            <br>
+            <p>
+              During our senior year of college, a couple friends and I built a custom EHR for
+              nurses working for nonprofit
+              <a href="https://www.heartforafrica.org/" target="_blank" class="black-link">Heart for Africa</a>,
+              located in Eswatini, Africa. The system would replace paper files, which became
+              unwieldy as the number of children being cared for grew to the order of hundreds.
+              In July of 2019, three of us hopped on a plane, suitcase equipped with a few
+              electronics, to install the system onsite.
+            </p>
+            <br>
+            <p>
+              Check out the poster we made for class:
+              <a href="files/hfa-ehr-poster-2019.pdf" target="_blank" class="black-link"><img src="img/hfa-ehr-poster-2019-thumbnail.png" width=100%></a>
+            </p>
+            <br>
+            <p>
+              On the software side, the product was built as a web application (MERN stack) with
+              a nice modern UI. Intended to work with limited resources, in particular very
+              unreliable internet access, the server is able to run on a Raspberry Pi right in the
+              building. Connected to a router by ethernet, it provides local access from other
+              devices (in our case, the nurses had personal laptops). Also, each day, a cron job
+              attempts to upload a full backup of the data to the cloud (with highly variable
+              success rate).
+            </p>
+            <br>
+            <p>
+              Despite unreliable internet access and non-static IP of the Pi, through a series of
+              complicated connections and procedures we were able to ensure ourselves sporadic
+              ssh access into the server, just good enough to allow us to send and install software
+              updates and debug any issues.
+            </p>
           </div>
+          <hr>
           <div class="project">
-            beep
-          </div>
-          <div class="project">
-            boop
+            <b>Messenger Stats</b>
+            <br>
+            <br>
+            <p>
+              Inspired by the question of just how many thumbs down reacts one of my friends
+              received in our beloved group chat, I wrote some scripts to process and visualize
+              some potentially interesting stats from Facebook Messenger data.
+            </p>
+            <br>
+            <p>
+              Example: the aforementioned group chat.
+              <a href="img/reacts-received-example.png"><img src="img/reacts-received-example.png" width=100%></a>
+              <a href="img/messages-rate-over-time-example.png"><img src="img/messages-rate-over-time-example.png" width=100%></a>
+            </p>
+            <br>
+            <p>
+              <a href="https://github.com/robinz62/messenger-stats" target="_blank" class="black-link">github repo here</a>
+            </p>
           </div>
         </div>
       </div>
@@ -35,7 +83,7 @@
         <ul>
           <li>home</li>
           <li>projects</li>
-          <li>other</li>
+          <li>random</li>
         </ul>
       </div>
     </div>
