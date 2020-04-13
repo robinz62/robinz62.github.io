@@ -1,5 +1,3 @@
-/* TODO: change sizes to not be dependent on vmin */
-
 html {
   overflow-y: scroll;
 }
@@ -26,8 +24,8 @@ a {
 
 .container {
   display: inline-block;
-  margin-top: 24vmin;
-  margin-bottom: 24vmin;
+  margin-top: 128px;
+  margin-bottom: 128px;
 }
 
 .content {
@@ -35,28 +33,28 @@ a {
   display: inline-block;
   font-family: 'Nunito Sans', sans-serif;
   text-align: center;
-  width: 56vmin;
+  width: 512px;
 
   animation: fade-in 0.5s ease-in 0s 1 normal;
 }
 
 .name {
-  font-size: 8vmin;
+  font-size: 64px;
 }
 
 .headline {
-  font-size: 2vmin;
+  font-size: 16px;
 }
 
 .links {
-  margin: 1vmin;
+  margin: 0px;
 }
 
 .links img {
-  height: 4vmin;
-  margin: 1vmin;
+  height: 64px;
+  margin: 8px;
   opacity: 0.75;
-  width: 4vmin;
+  width: 32px;
 }
 
 .links img:hover {
@@ -68,10 +66,11 @@ a {
 .nav {
   float: left;
   font-family: 'Nunito Sans', sans-serif;
-  font-size: 3vmin;
+  font-size: 24px;
   font-weight: 600;
-  margin: 2vmin 3vmin 0 0;
+  margin: 16px 16px 0px 0px;
   text-align: right;
+  width: 128px;
 }
 
 .nav ul {
@@ -113,45 +112,37 @@ a {
 
 #invis {
   float: right;
-  margin: 2vmin 0 0 3vmin;
+  margin: 16px 0 0 16px;
   text-align: left;
   visibility: hidden;
 }
 
-/* page-specific */
+/* content pages */
 
 #about-container {
-  font-size: 2vmin;
-  margin-top: 2vmin;
-  margin-left: 1vmin;
+  font-size: 14px;
+  margin-top: 16px;
+  margin-left: 16px;
   text-align: left;
 }
 
 #projects-container {
-  font-size: 2vmin;
-  margin-top: 2vmin;
-  margin-left: 1vmin;
+  font-size: 14px;
+  margin-top: 16px;
+  margin-left: 16px;
   text-align: left;
-}
-
-.project {
-  margin-bottom: 4vmin;
 }
 
 #random-container {
-  font-size: 2vmin;
-  margin-top: 2vmin;
-  margin-left: 1vmin;
+  font-size: 14px;
+  margin-top: 16px;
+  margin-left: 16px;
   text-align: left;
 }
 
-.random {
-  margin-bottom: 3vmin;
-  margin-top: 3vmin;
-}
-
-#first-random {
-  margin-top: 2vmin;
+.hline {
+  margin-top: 32px;
+  margin-bottom: 32px;
 }
 
 .black-link {
