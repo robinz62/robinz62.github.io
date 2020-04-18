@@ -1,5 +1,6 @@
 html {
   overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -11,12 +12,12 @@ p {
 }
 
 a {
+  color: #404040;
   display: inline-block;
   line-height: 0;
 }
 
-.nav a:link, .nav a:visited {
-  color: #404040;
+a:link, a:visited {
   text-decoration: none;
 }
 
@@ -70,7 +71,7 @@ a {
   font-weight: 600;
   margin: 16px 16px 0px 0px;
   text-align: right;
-  width: 128px;
+  width: 256px;
 }
 
 .nav ul {
@@ -110,10 +111,27 @@ a {
   animation-delay: 1.0s;
 }
 
-#invis {
+.right-nav {
   float: right;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
   margin: 16px 0 0 16px;
   text-align: left;
+  width: 256px;
+}
+
+.right-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.right-nav li:hover {
+  opacity: 0.25;
+}
+
+.invis {
   visibility: hidden;
 }
 
@@ -148,7 +166,6 @@ a {
 .black-link {
   color: black;
   font-weight: 600;
-  text-decoration: none;
   
   transition: opacity 0.25s ease;
 }
