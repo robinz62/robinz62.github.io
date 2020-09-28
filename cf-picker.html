@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="shortcut icon" href="img/thinking-face.ico">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
+    <title>About</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav">
+        <ul>
+          <li><a href="index.html">home</a></li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="projects.html">projects</a></li>
+          <li><a href="random.html">random</a></li>
+          <li class="nav-active"><a href="codeforces-randomizer.html">cf picker</a></li>
+        </ul>
+      </div>
+      <div class="content" >
+        <p id="cf-picker">
+          <b>Picks a random codeforces problem to do!</b>
+          <br>
+          Rating: <input type="text" id="rating-lower" placeholder="0" size=4></input> -
+          <input type="text" id="rating-upper" placeholder="5000" size=4></input>
+          <br>
+          <br>
+          <button onclick="getProblem()">Get Problem</button>
+          <br>
+          <div id="result-container">
+            <div id="result-link-div"><a id="result-link" href="" target="_blank"></a></div>
+            <div id="result-nolink-div">No Results :(</div>
+          </div>
+        </p>
+      </div>
+      <div class="right-nav invis" />
+    </div>
+    <script src="js/cf-picker.js"></script>
+  </body>
+</html>

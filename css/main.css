@@ -158,6 +158,27 @@ a:link, a:visited {
   text-align: left;
 }
 
+#cf-picker {
+  font-size: 16px;
+  margin-top: 16px;
+  margin-left: 16px;
+  text-align: left;
+}
+
+#result-container {
+  margin-top: 16px;
+}
+
+#result-link-div {
+  display: none;
+  font-size: 24px;
+}
+
+#result-nolink-div {
+  display: none;
+  font-size: 24px;
+}
+
 .hline {
   margin-top: 32px;
   margin-bottom: 32px;
