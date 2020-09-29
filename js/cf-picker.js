@@ -6,6 +6,8 @@
 // problems: the list of problems.
 //
 // TODO(robinz62): implement tags
+// TODO(robinz62): implement filter by already solved, given handle
+// TODO(robinz62): error handling
 function getProblem() {
   if (typeof Storage === 'undefined' || !window.sessionStorage.getItem('problems')) {
     const xmlHttp = new XMLHttpRequest();
