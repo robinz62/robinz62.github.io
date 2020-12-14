@@ -88,7 +88,7 @@ a:link, a:visited {
   opacity: 0.25;
 }
 
-#li2, #li3, #li4 {
+#li2, #li3, #li4, #li5 {
   animation: fade-in 0.4s ease-in 0s 1 normal;
   animation-fill-mode: backwards;
 }
@@ -109,6 +109,10 @@ a:link, a:visited {
 
 #li4 {
   animation-delay: 1.0s;
+}
+
+#li5 {
+  animation-delay: 1.2s;
 }
 
 .right-nav {
