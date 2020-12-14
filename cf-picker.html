@@ -19,20 +19,40 @@
         </ul>
       </div>
       <div class="content" >
-        <p id="cf-picker">
+        <div id="cf-picker">
           <b>Picks a random codeforces problem to do!</b>
           <br>
-          Rating: <input type="text" id="rating-lower" placeholder="0" size=4></input> -
-          <input type="text" id="rating-upper" placeholder="5000" size=4></input>
-          <br>
+          <table>
+            <tr>
+              <td>Rating:</td>
+              <td>
+                <input type="text" id="rating-lower" placeholder="0" size=4></input> -
+                <input type="text" id="rating-upper" placeholder="5000" size=4></input>
+              </td>
+            </tr>
+            <tr>
+              <td>Tags:</td>
+              <td>
+                <input type="text" id="tags" placeholder="e.g. greedy,dp,..." size=20></input>
+                <div id="tags-tooltip">?
+                  <span id="tags-tooltip-text">Comma-separated tags.</span>
+                </div>
+              </td>
+            </tr>
+            <!-- TODO(robinz62): The following code is in case I ever decide to implement. -->
+            <!-- <tr>
+              <td>Handle:</td>
+              <td><input type="text" id="user-handle" placeholder="e.g. robinz62" size=10></td>
+            </tr> -->
+          </table>
           <br>
           <button onclick="getProblem()">Get Problem</button>
           <br>
           <div id="result-container">
-            <div id="result-link-div"><a id="result-link" href="" target="_blank"></a></div>
+            <div id="result-link-div"><p><a id="result-link" href="" target="_blank"></a></p></div>
             <div id="result-nolink-div">No Results :(</div>
           </div>
-        </p>
+        </div>
       </div>
       <div class="right-nav invis" />
     </div>
