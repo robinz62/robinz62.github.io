@@ -16,6 +16,7 @@ function getProblem() {
       }
       const problems = xmlHttp.response.result.problems;
       getProblemFromList(problems);
+      window.sessionStorage.setItem('problems', JSON.stringify(problems));
     }
     xmlHttp.open('GET', 'https://codeforces.com/api/problemset.problems?lang=en', /*async=*/true);
     xmlHttp.send(null);
