@@ -72,7 +72,7 @@ let runMatter = () => {
         return object;
     }
 
-    let ur = logo('./img/ur.png');
+    let lle = logo('./img/lle.png');
     let penn = logo('./img/penn.png');
     let bentley = logo('./img/bentley.png');
     let qualtrics = logo('./img/qualtrics.png');
@@ -91,7 +91,7 @@ let runMatter = () => {
     });
 
     Composite.add(world, [ground, leftWall, rightWall, ceiling]);
-    Composite.add(world, [ur, penn, bentley, qualtrics, google, js]);
+    Composite.add(world, [lle, penn, bentley, qualtrics, google, js]);
 
     let mouse = Mouse.create(render.canvas);
     let mouseConstraint = MouseConstraint.create(engine, {
