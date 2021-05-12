@@ -21,6 +21,16 @@ a:link, a:visited {
   text-decoration: none;
 }
 
+#canvas {
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
 /* main content area */
 
 .container {
@@ -88,7 +98,7 @@ a:link, a:visited {
   opacity: 0.25;
 }
 
-#li2, #li3, #li4, #li5 {
+#li2, #li3, #li4, #li5, #li6 {
   animation: fade-in 0.4s ease-in 0s 1 normal;
   animation-fill-mode: backwards;
 }
@@ -100,19 +110,23 @@ a:link, a:visited {
 }
 
 #li2 {
-  animation-delay: 0.6s;
+  animation-delay: 0.5s;
 }
 
 #li3 {
-  animation-delay: 0.8s;
+  animation-delay: 0.6s;
 }
 
 #li4 {
-  animation-delay: 1.0s;
+  animation-delay: 0.7s;
 }
 
 #li5 {
-  animation-delay: 1.2s;
+  animation-delay: 0.8s;
+}
+
+#li6 {
+  animation-delay: 0.9s;
 }
 
 .right-nav {
