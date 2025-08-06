@@ -1,47 +1,50 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="shortcut icon" href="img/winking-face.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Nunito+Sans&display=swap" rel="stylesheet">
-    <title>robin</title>
-    <script src="third_party/matter.min.js" defer></script>
-    <script src="js/physics.js" defer></script>
-  </head>
-  <body>
-    <div class="container">
-      <div class="nav">
-        <ul>
-          <li id="li1" class="nav-active"><a href="#">home</a></li>
-          <li id="li2"><a href="about.html">about</a></li>
-          <li id="li3"><a href="projects.html">projects</a></li>
-          <li id="li4"><a href="random.html">random</a></li>
-          <li id="li5"><a href="cf-picker.html">cf picker</a></li>
-          <li id="li6"><a href="#">???</a></li>
-        </ul>
-      </div>
-      <div class="content">
-        <p class="name">robin zhang</p>
-        <p class="headline">Computer Science · University of Pennsylvania '19</p>
-        <div class="links">
-          <a href="https://www.linkedin.com/in/robinzhang97" target="_blank"><img src="img/linkedin.svg" alt="linkedin link"></a>
-          <a href="https://github.com/robinz62" target="_blank"><img src="img/github.svg" alt="github link"></a>
-          <a href="mailto:rzha@alumni.upenn.edu"><img src="img/gmail.svg" alt="email link"></a>
-          <a href="files/robin-zhang-resume.pdf" target="_blank"><img src="img/download.svg"></a>
-        </div>
-      </div>
-      <div class="right-nav invis"></div>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="shortcut icon" href="img/winking-face.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Nunito+Sans&display=swap" rel="stylesheet">
+  <title>robin</title>
+  <script src="third_party/matter.min.js" defer></script>
+  <script src="js/physics.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="nav">
+      <ul>
+        <li id="li1" class="nav-active"><a href="#">home</a></li>
+        <li id="li2"><a href="about.html">about</a></li>
+        <li id="li3"><a href="projects.html">projects</a></li>
+        <li id="li4"><a href="random.html">random</a></li>
+        <li id="li5"><a href="cf-picker.html">cf picker</a></li>
+        <li id="li6"><a href="#">???</a></li>
+      </ul>
     </div>
-    <div id="canvas"></div>
-    <script>
-      // Trigger the simulation                                                                                                        
-      document.getElementById("li6").addEventListener("click", function() {
-        document.getElementById("canvas").style.display = "block";
-        runMatter();
-      });
-    </script>
-  </body>
+    <div class="content">
+      <p class="name">robin zhang</p>
+      <p class="headline">Computer Science · University of Pennsylvania '19</p>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/robinzhang97" target="_blank"><img src="img/linkedin.svg"
+            alt="linkedin link"></a>
+        <a href="https://github.com/robinz62" target="_blank"><img src="img/github.svg" alt="github link"></a>
+        <a href="mailto:rzha@alumni.upenn.edu"><img src="img/gmail.svg" alt="email link"></a>
+        <a href="files/robin-zhang-resume.pdf" target="_blank"><img src="img/download.svg"></a>
+      </div>
+    </div>
+    <div class="right-nav invis"></div>
+  </div>
+  <div id="canvas"></div>
+  <script>
+    // Trigger the simulation                                                                                                        
+    document.getElementById("li6").addEventListener("click", function () {
+      document.getElementById("canvas").style.display = "block";
+      runMatter();
+    });
+  </script>
+</body>
 <html>

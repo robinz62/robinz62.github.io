@@ -1,119 +1,126 @@
 <!DOCTYPE html>
 <html id="top">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="shortcut icon" href="img/winking-face.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Nunito+Sans&display=swap" rel="stylesheet">
-    <title>projects</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="nav">
-        <ul>
-          <li><a href="index.html">home</a></li>
-          <li><a href="about.html">about</a></li>
-          <li class="nav-active"><a href="projects.html">projects</a></li>
-          <li><a href="random.html">random</a></li>
-          <li><a href="cf-picker.html">cf picker</a></li>
-        </ul>
-      </div>
-      <div class="content">
-        <div id="projects-container">
-          <div id="hfa-ehr">
-            <b>Electronic Health Record System for Heart for Africa</b>
-            <br>
-            <br>
-            <p>
-              During our senior year of college, a couple of friends and I built a fully-fledged,
-              custom EHR for nurses working for nonprofit
-              <a href="https://www.heartforafrica.org/" target="_blank" class="black-link">Heart for Africa</a>,
-              located in Eswatini, Africa. The system would replace paper files, which became
-              unwieldy as the number of children being cared for grew to the order of hundreds.
-              In July of 2019, three of us hopped on a plane, suitcase equipped with a few
-              electronics, to install the system onsite.
-            </p>
-            <br>
-            <p>
-              Check out the poster we made for class:
-              <a href="files/hfa-ehr-poster-2019.pdf" target="_blank"><img src="img/hfa-ehr-poster-2019-thumbnail.png" width=100%></a>
-            </p>
-            <br>
-            <p>
-              On the software side, the product was built as a web application (MERN stack) with
-              a nice modern UI. Intended to work with limited resources, in particular very
-              unreliable internet access, the server is able to run on a Raspberry Pi right in the
-              building. Connected to a router by ethernet, it provides local access from other
-              devices (in our case, the nurses had personal laptops). Also, each day, a cron job
-              attempts to upload a full backup of the data to the cloud (with highly variable
-              success rate).
-            </p>
-            <br>
-            <p>
-              Despite unreliable internet access and non-static IP of the Pi, through a series of
-              complicated connections and procedures we were able to ensure ourselves sporadic
-              ssh access into the server, just good enough to allow us to send and install software
-              updates and debug any issues.
-            </p>
-            <br>
-            <p>
-              As of updating this (Aug 2020), the entire project is around 50k lines of code, and
-              we're still in contact with and supporting the nurses over there :D.
-            </p>
-            <br>
-            <a href="#top">&#x25B2; back to top</a>
-          </div>
-          <hr class="hline">
-          <div id="messenger-stats">
-            <b>Messenger Stats</b>
-            <br>
-            <br>
-            <p>
-              Inspired by the question of just how many thumbs down reacts one of my friends
-              received in our beloved group chat, I wrote some scripts to process and visualize
-              some potentially interesting stats from Facebook Messenger data.
-            </p>
-            <br>
-            <p>
-              Example: the aforementioned group chat.
-              <a href="img/reacts-received-example.png"><img src="img/reacts-received-example.png" width=100%></a>
-              <a href="img/messages-rate-over-time-example.png"><img src="img/messages-rate-over-time-example.png" width=100%></a>
-            </p>
-            <br>
-            <p>
-              <a href="https://github.com/robinz62/messenger-stats" target="_blank" class="black-link">github repo here</a>
-            </p>
-            <br>
-            <a href="#top">&#x25B2; back to top</a>
-          </div>
-          <hr class="hline">
-          <div id="personal-website">
-            <b>Personal Website</b>
-            <br>
-            <br>
-            <p>
-              This website lol. Initially created to teach myself rudimentary HTML/CSS and because
-              it seemed everyone else had one. Updated every now and then when I have nothing
-              better to do.
-            </p>
-            <br>
-            <p>
-              <a href="https://github.com/robinz62/robinz62.github.io" target="_blank" class="black-link">github repo here</a>
-            </p>
-            <br>
-            <a href="#top">&#x25B2; back to top</a>
-          </div>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="shortcut icon" href="img/winking-face.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Nunito+Sans&display=swap" rel="stylesheet">
+  <title>projects</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="nav">
+      <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="about.html">about</a></li>
+        <li class="nav-active"><a href="projects.html">projects</a></li>
+        <li><a href="random.html">random</a></li>
+        <li><a href="cf-picker.html">cf picker</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <div id="projects-container">
+        <div id="hfa-ehr">
+          <b>Electronic Health Record System for Heart for Africa</b>
+          <br>
+          <br>
+          <p>
+            During our senior year of college, a couple of friends and I built a fully-fledged,
+            custom EHR for nurses working for nonprofit
+            <a href="https://www.heartforafrica.org/" target="_blank" class="black-link">Heart for Africa</a>,
+            located in Eswatini, Africa. The system would replace paper files, which became
+            unwieldy as the number of children being cared for grew to the order of hundreds.
+            In July of 2019, three of us hopped on a plane, suitcase equipped with a few
+            electronics, to install the system onsite.
+          </p>
+          <br>
+          <p>
+            Check out the poster we made for class:
+            <a href="files/hfa-ehr-poster-2019.pdf" target="_blank"><img src="img/hfa-ehr-poster-2019-thumbnail.png"
+                width=100%></a>
+          </p>
+          <br>
+          <p>
+            On the software side, the product was built as a web application (MERN stack) with
+            a nice modern UI. Intended to work with limited resources, in particular very
+            unreliable internet access, the server is able to run on a Raspberry Pi right in the
+            building. Connected to a router by ethernet, it provides local access from other
+            devices (in our case, the nurses had personal laptops). Also, each day, a cron job
+            attempts to upload a full backup of the data to the cloud (with highly variable
+            success rate).
+          </p>
+          <br>
+          <p>
+            Despite unreliable internet access and non-static IP of the Pi, through a series of
+            complicated connections and procedures we were able to ensure ourselves sporadic
+            ssh access into the server, just good enough to allow us to send and install software
+            updates and debug any issues.
+          </p>
+          <br>
+          <p>
+            As of updating this (Aug 2020), the entire project is around 50k lines of code, and
+            we're still in contact with and supporting the nurses over there :D.
+          </p>
+          <br>
+          <a href="#top">&#x25B2; back to top</a>
+        </div>
+        <hr class="hline">
+        <div id="messenger-stats">
+          <b>Messenger Stats</b>
+          <br>
+          <br>
+          <p>
+            Inspired by the question of just how many thumbs down reacts one of my friends
+            received in our beloved group chat, I wrote some scripts to process and visualize
+            some potentially interesting stats from Facebook Messenger data.
+          </p>
+          <br>
+          <p>
+            Example: the aforementioned group chat.
+            <a href="img/reacts-received-example.png"><img src="img/reacts-received-example.png" width=100%></a>
+            <a href="img/messages-rate-over-time-example.png"><img src="img/messages-rate-over-time-example.png"
+                width=100%></a>
+          </p>
+          <br>
+          <p>
+            <a href="https://github.com/robinz62/messenger-stats" target="_blank" class="black-link">github repo
+              here</a>
+          </p>
+          <br>
+          <a href="#top">&#x25B2; back to top</a>
+        </div>
+        <hr class="hline">
+        <div id="personal-website">
+          <b>Personal Website</b>
+          <br>
+          <br>
+          <p>
+            This website lol. Initially created to teach myself rudimentary HTML/CSS and because
+            it seemed everyone else had one. Updated every now and then when I have nothing
+            better to do.
+          </p>
+          <br>
+          <p>
+            <a href="https://github.com/robinz62/robinz62.github.io" target="_blank" class="black-link">github repo
+              here</a>
+          </p>
+          <br>
+          <a href="#top">&#x25B2; back to top</a>
         </div>
       </div>
-      <div class="right-nav">
-        <ul>
-          <li><a href="#hfa-ehr">EHR for HFA</a></li>
-          <li><a href="#messenger-stats">Messenger Stats</a></li>
-          <li><a href="#personal-website">Personal Website</a></li>
-        </ul>
-      </div>
     </div>
-  </body>
+    <div class="right-nav">
+      <ul>
+        <li><a href="#hfa-ehr">EHR for HFA</a></li>
+        <li><a href="#messenger-stats">Messenger Stats</a></li>
+        <li><a href="#personal-website">Personal Website</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+
 </html>
