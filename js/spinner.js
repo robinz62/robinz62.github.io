@@ -1,16 +1,25 @@
 let currentDeg = 0;
 const colors = ['#ccc', '#eee', '#ff0000', '#ACF6C8'];
 let items = ['A', 'B', 'C', 'D', 'E', 'F'];
-let theChoosenIndex;
+let theChosenIndex;
 
 const wheel = document.getElementById('wheel');
 const spinBtn = document.getElementById('spin-action');
 const resultText = document.getElementById('result-text');
-const removeBtn = document.getElementById('remove-the-choosen-btn');
+const removeBtn = document.getElementById('remove-the-chosen-btn');
 const inputDataEl = document.getElementById('input-data');
 
-const resultModal = new bootstrap.Modal(document.getElementById('result-modal'));
-const inputModal = new bootstrap.Modal(document.getElementById('input-modal'));
+// const resultModal = new bootstrap.Modal(document.getElementById('result-modal'));
+// const inputModal = new bootstrap.Modal(document.getElementById('input-modal'));
+
+function openModal(id) {
+  document.getElementById(id).classList.add('show');
+}
+
+function closeModal(id) {
+  document.getElementById(id).classList.remove('show');
+}
+
 
 function init() {
   wheel.innerHTML = '';
@@ -45,13 +54,20 @@ function init() {
   }
 }
 
+function getTheChosen(deg) {
+  const adjustedDeg = (360 - (deg % 360) + 90) % 360; // Adjust for top marker at 0°
+  const degPerPart = 360 / items.length;
+  theChosenIndex = Math.floor(adjustedDeg / degPerPart) % items.length;
+  return items[theChosenIndex];
+}
+
 function onSpin() {
   currentDeg += Math.floor(Math.random() * 360) + 360 * 5;
   wheel.style.transform = `rotate(${currentDeg}deg)`;
   spinBtn.disabled = true;
 
   setTimeout(() => {
-    const theChoosen = getTheChoosen(currentDeg);
+    const theChosen = getTheChosen(currentDeg);
     spinBtn.disabled = false;
 
     if (items.length > 1) {
@@ -60,14 +76,9 @@ function onSpin() {
       removeBtn.style.display = 'none';
     }
 
-    resultText.textContent = theChoosen;
-    resultModal.show();
+    resultText.textContent = theChosen;
+    openModal('result-modal');
   }, 3000);
-}
-
-function getTheChoosen(deg) {
-  theChoosenIndex = (Math.ceil((deg % 360) / (360 / items.length) + 0.5) - 1) % items.length;
-  return items[theChoosenIndex];
 }
 
 function onInputData() {
@@ -75,7 +86,7 @@ function onInputData() {
   if (inputData) {
     items = inputData.split('\n').filter(item => item.trim());
     if (items.length >= 1) {
-      inputModal.hide();
+      closeModal('input-modal');
       init();
     }
   }
@@ -83,21 +94,22 @@ function onInputData() {
 
 function openInputModal() {
   inputDataEl.value = items.join('\n');
-  inputModal.show();
+  openModal('input-modal');
 }
 
-function onRemoveTheChoosen() {
+function onRemoveTheChosen() {
   if (items.length > 1) {
-    items.splice(theChoosenIndex, 1);
-    resultModal.hide();
+    items.splice(theChosenIndex, 1);
+    closeModal('result-modal');
     init();
   }
 }
+
 
 // Event listeners
 spinBtn.addEventListener('click', onSpin);
 document.getElementById('reinit-btn').addEventListener('click', openInputModal);
 document.getElementById('save-input-btn').addEventListener('click', onInputData);
-removeBtn.addEventListener('click', onRemoveTheChoosen);
+removeBtn.addEventListener('click', onRemoveTheChosen);
 
 init();
