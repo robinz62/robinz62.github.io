@@ -1,16 +1,13 @@
 let currentDeg = 0;
 const colors = ['#ccc', '#eee', '#ff0000', '#ACF6C8'];
-let items = ['A', 'B', 'C', 'D', 'E', 'F'];
+let items = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
 let theChosenIndex;
 
 const wheel = document.getElementById('wheel');
-const spinBtn = document.getElementById('spin-action');
+const spinBtn = document.getElementById('spin-button');
 const resultText = document.getElementById('result-text');
 const removeBtn = document.getElementById('remove-the-chosen-btn');
 const inputDataEl = document.getElementById('input-data');
-
-// const resultModal = new bootstrap.Modal(document.getElementById('result-modal'));
-// const inputModal = new bootstrap.Modal(document.getElementById('input-modal'));
 
 function openModal(id) {
   document.getElementById(id).classList.add('show');
@@ -19,7 +16,6 @@ function openModal(id) {
 function closeModal(id) {
   document.getElementById(id).classList.remove('show');
 }
-
 
 function init() {
   wheel.innerHTML = '';
@@ -41,23 +37,28 @@ function init() {
         part.style.height = '100%';
       } else if (items.length === 2) {
         part.style.height = '100%';
-        part.style.transform = `rotate(${i * degPerPart}deg)`;
+        part.style.transform = `rotate(${i * degPerPart + 90}deg)`;
       } else {
-        part.style.height = `${Math.tan((degPerPart / 2) * Math.PI / 180) * 100}%`;
-        part.style.transform = `translateY(-50%) rotate(${i * -degPerPart}deg)`;
+        // Calculate the height of the triangle segment
+        const height = Math.tan((degPerPart / 2) * Math.PI / 180) * 100;
+        part.style.height = `${height}%`;
+        part.style.transform = `translateY(-50%) rotate(${i * degPerPart + 90}deg)`;
         part.style.clipPath = 'polygon(0 0, 0 100%, 100% 50%)';
         part.style.top = '50%';
       }
-
+      
       wheel.appendChild(part);
     });
   }
 }
 
 function getTheChosen(deg) {
-  const adjustedDeg = (360 - (deg % 360) + 90) % 360; // Adjust for top marker at 0°
   const degPerPart = 360 / items.length;
-  theChosenIndex = Math.floor(adjustedDeg / degPerPart) % items.length;
+  const normalizedDeg = deg % 360;
+  // we SUBTRACT normalizedDeg because spinning our wheel clockwise corresponds to
+  // moving our pointer counterclockwise.
+  const selectedDeg = (360 - normalizedDeg + degPerPart / 2) % 360;
+  theChosenIndex = Math.floor(selectedDeg / degPerPart);
   return items[theChosenIndex];
 }
 
@@ -81,20 +82,20 @@ function onSpin() {
   }, 3000);
 }
 
-function onInputData() {
+function onSaveInputs() {
   const inputData = inputDataEl.value.trim();
   if (inputData) {
     items = inputData.split('\n').filter(item => item.trim());
     if (items.length >= 1) {
-      closeModal('input-modal');
+      closeModal('edit-inputs-modal');
       init();
     }
   }
 }
 
-function openInputModal() {
+function openEditInputsModal() {
   inputDataEl.value = items.join('\n');
-  openModal('input-modal');
+  openModal('edit-inputs-modal');
 }
 
 function onRemoveTheChosen() {
@@ -105,11 +106,10 @@ function onRemoveTheChosen() {
   }
 }
 
-
 // Event listeners
 spinBtn.addEventListener('click', onSpin);
-document.getElementById('reinit-btn').addEventListener('click', openInputModal);
-document.getElementById('save-input-btn').addEventListener('click', onInputData);
+document.getElementById('edit-inputs-btn').addEventListener('click', openEditInputsModal);
+document.getElementById('save-inputs-btn').addEventListener('click', onSaveInputs);
 removeBtn.addEventListener('click', onRemoveTheChosen);
 
 init();

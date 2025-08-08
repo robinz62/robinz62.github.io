@@ -30,15 +30,14 @@
         <div class="wheel-wrapper">
           <div id="wheel-container">
             <div id="wheel"></div>
-            <button id="spin-action">SPIN</button>
+            <button id="spin-button">SPIN</button>
             <div class="marker"></div>
           </div>
 
           <br>
-          <button type="button" class="custom-btn primary" id="reinit-btn">Re-init</button>
+          <button type="button" class="custom-btn primary" id="edit-inputs-btn">Edit Inputs</button>
         </div>
 
-        <!-- Result Modal -->
         <div class="custom-modal" id="result-modal">
           <div class="custom-modal-content">
             <div class="custom-modal-header">
@@ -54,8 +53,7 @@
           </div>
         </div>
 
-        <!-- Input Modal -->
-        <div class="custom-modal" id="input-modal">
+        <div class="custom-modal" id="edit-inputs-modal">
           <div class="custom-modal-content">
             <div class="custom-modal-header">
               <h5>Update Items</h5>
@@ -64,8 +62,8 @@
               <textarea id="input-data" rows="10" class="custom-textarea"></textarea>
             </div>
             <div class="custom-modal-footer">
-              <button class="custom-btn secondary" onclick="closeModal('input-modal')">Close</button>
-              <button class="custom-btn primary" id="save-input-btn">Save changes</button>
+              <button class="custom-btn secondary" onclick="closeModal('edit-inputs-modal')">Close</button>
+              <button class="custom-btn primary" id="save-inputs-btn">Save changes</button>
             </div>
           </div>
         </div>
