@@ -1,12 +1,12 @@
 let currentDeg = 0;
 const colors = ['#ccc', '#eee', '#ff0000', '#ACF6C8'];
 let items = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
-let theChosenIndex;
+let selectedIndex;
 
 const wheel = document.getElementById('wheel');
 const spinBtn = document.getElementById('spin-button');
 const resultText = document.getElementById('result-text');
-const removeBtn = document.getElementById('remove-the-chosen-btn');
+const removeBtn = document.getElementById('remove-the-selected-btn');
 const inputDataEl = document.getElementById('input-data');
 
 function openModal(id) {
@@ -52,14 +52,14 @@ function init() {
   }
 }
 
-function getTheChosen(deg) {
+function getSelected(deg) {
   const degPerPart = 360 / items.length;
   const normalizedDeg = deg % 360;
   // we SUBTRACT normalizedDeg because spinning our wheel clockwise corresponds to
   // moving our pointer counterclockwise.
   const selectedDeg = (360 - normalizedDeg + degPerPart / 2) % 360;
-  theChosenIndex = Math.floor(selectedDeg / degPerPart);
-  return items[theChosenIndex];
+  selectedIndex = Math.floor(selectedDeg / degPerPart);
+  return items[selectedIndex];
 }
 
 function onSpin() {
@@ -68,7 +68,7 @@ function onSpin() {
   spinBtn.disabled = true;
 
   setTimeout(() => {
-    const theChosen = getTheChosen(currentDeg);
+    const selected = getSelected(currentDeg);
     spinBtn.disabled = false;
 
     if (items.length > 1) {
@@ -77,7 +77,7 @@ function onSpin() {
       removeBtn.style.display = 'none';
     }
 
-    resultText.textContent = theChosen;
+    resultText.textContent = selected;
     openModal('result-modal');
   }, 3000);
 }
@@ -98,9 +98,9 @@ function openEditInputsModal() {
   openModal('edit-inputs-modal');
 }
 
-function onRemoveTheChosen() {
+function onRemoveSelected() {
   if (items.length > 1) {
-    items.splice(theChosenIndex, 1);
+    items.splice(selectedIndex, 1);
     closeModal('result-modal');
     init();
   }
@@ -110,6 +110,6 @@ function onRemoveTheChosen() {
 spinBtn.addEventListener('click', onSpin);
 document.getElementById('edit-inputs-btn').addEventListener('click', openEditInputsModal);
 document.getElementById('save-inputs-btn').addEventListener('click', onSaveInputs);
-removeBtn.addEventListener('click', onRemoveTheChosen);
+removeBtn.addEventListener('click', onRemoveSelected);
 
 init();
