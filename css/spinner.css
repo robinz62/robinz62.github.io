@@ -77,7 +77,6 @@
 #spinner {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   min-height: 100vh;
 }
 
@@ -114,14 +113,6 @@
 }
 
 #spinner .wheel-wrapper #wheel-container .marker {
-  /* width: 1.5rem;
-  height: 2.5rem;
-  clip-path: polygon(0 0, 0% 100%, 100% 50%);
-  background-color: #FFFFFF;
-  position: absolute;
-  top: 50%;
-  transform: translate(-20%, -50%); */
-
   width: 2.5rem;
   height: 1.5rem;
   clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
@@ -137,7 +128,8 @@
   position: relative;
   border-radius: 50%;
   overflow: hidden;
-  transition: transform 3s ease;
+  /* transition: transform 7s ease-out; */
+  transition: transform 8s cubic-bezier(0.25, 0, 0, 1);
 }
 
 #spinner .wheel-wrapper #wheel-container #wheel .part {
@@ -154,7 +146,7 @@
   display: flex;
   align-items: center;
   color: #FFFFFF;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 600;
   overflow: hidden;
   white-space: nowrap;
