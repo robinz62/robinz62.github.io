@@ -128,7 +128,6 @@
   position: relative;
   border-radius: 50%;
   overflow: hidden;
-  /* transition: transform 7s ease-out; */
   transition: transform 8s cubic-bezier(0.25, 0, 0, 1);
 }
 

@@ -313,7 +313,10 @@ items = [
         "add whatever liquid to the sauce: wine, chicken stock, pasta water, tap water is fine",
         "finish cooking pasta in the sauce, grate in parmigiano to taste, serve with chicken"
       ],
-    extras: ["try with ground spicy italian sausage"]
+    extras: [
+      "try with ground spicy italian sausage",
+      "add lemon zest/juice"
+    ]
   },
   {
     shortTitle: "orzo",
@@ -394,10 +397,52 @@ items = [
     steps:
       ["eyeball basically everything"]
   },
+  {
+    title: "doenjang jjigae",
+    ingredients:
+      ["1 potato, cubed",
+        "1 onion, cubed",
+        "1 zucchini, cubed",
+        "1 green korean chili pepper, diced",
+        "4 cloves garlic, minced",
+        "2 1/2 cups water",
+        "7 dried anchovies, cleaned, wrapped in cheesecloth",
+        "5 tbsp doenjang",
+        "6 oz tofu, cubed",
+        "2 scallions",
+        "rice"
+      ],
+    steps:
+      ["combine everything up through anchovies in pot, cover",
+        "cook until boiling",
+        'stir in doenjang, cook covered for another 20 mins',
+        "add tofu and heat for a couple minutes, discard anchovies",
+        "sprinkle scallions and have some on the side",
+        "serve with rice"
+      ]
+  },
+  {
+    title: "aglio e olio",
+    ingredients:
+      ["spaghetti",
+        "olive oil",
+        "garlic",
+        "parsley",
+        "parmigiano reggiano"
+      ],
+    steps:
+      ["cook spaghetti in salted water until shy of al dente",
+        "gently toast garlic in olive oil",
+        "strain spaghetti, saving some of the pasta water",
+        "combine everything over low heat, mixing to emulsify the liquids",
+        "serve with extra shaved parmigiano and black pepper to taste"
+        ]
+  },
 ];
 let todo = [
-  "doenjang jjigae",
-  "carbonara"
+  "carbonara",
+  "simple salmon and rice",
+  "rice wraps"
 ];
 let sides = [ "tofu and avocado", "deviled eggs", "sour spicy cold noodle"];
 let longerOrBiggerRecipes = ["nyt beef stew", "baked ziti", "macaroni salad", "taiwanese beef noodle soup", "hong shao rou"];
