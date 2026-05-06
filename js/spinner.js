@@ -198,7 +198,7 @@ items = [
       ],
     steps:
       ["brown ground beef, drain excess fat if needed, saute onions",
-        "add tomatoes and corn (liquids included) , water, and cheese",
+        "add tomatoes and corn (liquids included), water, and cheese",
         "add cooked pasta"
       ]
   },
@@ -436,16 +436,83 @@ items = [
         "strain spaghetti, saving some of the pasta water",
         "combine everything over low heat, mixing to emulsify the liquids",
         "serve with extra shaved parmigiano and black pepper to taste"
-        ]
+      ]
+  },
+  {
+    title: "carbonara",
+    ingredients:
+      ["todo"
+      ],
+    steps:
+      ["todo"
+      ]
+  },
+  {
+    title: "salmon with rice",
+    ingredients:
+      ["todo"
+      ],
+    steps:
+      ["todo"
+      ]
+  },
+  {
+    title: "rice wraps",
+    ingredients:
+      ["todo"
+      ],
+    steps:
+      ["todo"
+      ]
+  },
+  {
+    title: "pesto pasta with ground turkey",
+    ingredients:
+      ["todo"
+      ],
+    steps:
+      ["todo"
+      ]
+  },
+  {
+    title: "tomato egg",
+    ingredients:
+      ["todo"
+      ],
+    steps:
+      ["todo"
+      ]
+  },
+  {
+    title: "shredded carrot with minced beef",
+    ingredients:
+      ["todo"
+      ],
+    steps:
+      ["todo"
+      ]
+  },
+  {
+    title: "easy ground beef taco (bowl)",
+    ingredients:
+      ["todo"
+      ],
+    steps:
+      ["todo"
+      ]
+  },
+  {
+    title: "pasta alfredo???",
+    ingredients:
+      ["todo"
+      ],
+    steps:
+      ["todo"
+      ]
   },
 ];
-let todo = [
-  "carbonara",
-  "simple salmon and rice",
-  "rice wraps"
-];
-let sides = [ "tofu and avocado", "deviled eggs", "sour spicy cold noodle"];
+let sides = ["tofu and avocado", "deviled eggs", "sour spicy cold noodle"];
 let longerOrBiggerRecipes = ["nyt beef stew", "baked ziti", "macaroni salad", "taiwanese beef noodle soup", "hong shao rou"];
-let desserts = [ "red bean soup", "baked nian gao", "chocolate cheesecake", "chocolate lava cake"]
+let desserts = ["red bean soup", "baked nian gao", "chocolate cheesecake", "chocolate lava cake"]
 
 init();
